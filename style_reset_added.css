@@ -1,0 +1,199 @@
+/* Additional styles to fix text display issues */
+
+/* Fix for topbar */
+.topbar {
+  height: 60px;
+  background: #060a47;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  position: relative;
+  z-index: 101;
+}
+
+.topbar-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fix for table headers and cells */
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th:nth-child(1) {
+  width: 15%;
+} /* Mã */
+th:nth-child(2) {
+  width: 25%;
+} /* Tên */
+th:nth-child(3) {
+  width: 15%;
+} /* Đơn vị */
+th:nth-child(4) {
+  width: 15%;
+} /* Đơn giá */
+th:nth-child(5) {
+  width: 15%;
+} /* Hành động */
+
+/* Fix for search inputs */
+.function-bar input[type="text"] {
+  padding-right: 30px; /* Space for the search icon */
+}
+
+/* Fix for buttons */
+button {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fix for modal dialogs */
+#modal h3,
+#modal-order h3,
+#modal-supplier h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fix for report section */
+#report .tab-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 5px;
+}
+
+#report .tab {
+  flex: 0 0 auto;
+  min-width: 120px;
+  text-align: center;
+}
+
+#report .form-group label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#report .form-group select {
+  width: 100%;
+}
+
+/* Fix for custom date range */
+#custom-date-range {
+  margin-top: 10px;
+}
+
+#custom-date-range label {
+  margin-bottom: 8px;
+}
+
+#custom-date-range div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#custom-date-range span {
+  white-space: nowrap;
+}
+
+/* Fix for stats cards */
+.stat-card {
+  min-width: 150px;
+}
+
+.stat-info h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fix for action icons */
+.action-icons {
+  display: flex;
+  justify-content: space-around;
+  min-width: 100px;
+}
+
+.action-icons i {
+  margin: 0 5px;
+}
+
+/* Fix for sidebar menu items */
+.sidebar ul li a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fix for mobile responsiveness */
+@media (max-width: 768px) {
+  .topbar-title {
+    display: none;
+  }
+
+  .function-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .function-bar > div {
+    width: 100%;
+    max-width: none;
+  }
+
+  .function-bar input[type="text"] {
+    width: 100%;
+  }
+
+  .function-bar button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    min-width: 100px;
+  }
+
+  th:last-child,
+  td:last-child {
+    position: sticky;
+    right: 0;
+    background-color: inherit;
+  }
+
+  th:last-child {
+    background-color: #0d1b2a;
+  }
+
+  td:last-child {
+    background-color: white;
+  }
+}
